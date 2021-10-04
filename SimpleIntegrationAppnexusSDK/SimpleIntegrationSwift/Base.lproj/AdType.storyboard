@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19115.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="djH-zL-XO5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.5"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Simple Integration-->
+        <scene sceneID="u1A-VB-iwh">
+            <objects>
+                <tableViewController id="LGj-e7-gB6" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bbQ-S2-fnJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Select AdUnit" id="4Yv-5x-P1b">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hFC-ps-q9c">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="42.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hFC-ps-q9c" id="2iK-rs-CD5">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCX-1i-cT8">
+                                                    <rect key="frame" x="31" y="6" width="363" height="30"/>
+                                                    <state key="normal" title="Banners"/>
+                                                    <connections>
+                                                        <segue destination="Erp-PJ-llH" kind="show" id="PCh-lq-IjV"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PCX-1i-cT8" firstAttribute="centerY" secondItem="2iK-rs-CD5" secondAttribute="centerY" id="3Ib-pA-TI8"/>
+                                                <constraint firstItem="PCX-1i-cT8" firstAttribute="leading" secondItem="2iK-rs-CD5" secondAttribute="leadingMargin" constant="11" id="LMh-r7-bcq"/>
+                                                <constraint firstItem="PCX-1i-cT8" firstAttribute="top" secondItem="2iK-rs-CD5" secondAttribute="topMargin" constant="-5" id="aK9-DY-skK"/>
+                                                <constraint firstItem="PCX-1i-cT8" firstAttribute="trailing" secondItem="2iK-rs-CD5" secondAttribute="trailingMargin" id="dxM-5o-nPh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="LGj-e7-gB6" id="Byn-d4-dYY"/>
+                            <outlet property="delegate" destination="LGj-e7-gB6" id="heH-ST-73m"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Simple Integration" id="vvO-2h-Q7I"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wrc-Kk-HgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881.15942028985512" y="64.955357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GsW-qr-EhD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="djH-zL-XO5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H6f-Dl-rV2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LGj-e7-gB6" kind="relationship" relationship="rootViewController" id="pJ9-v7-ziO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xn1-xZ-2ee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28.985507246376812" y="64.955357142857139"/>
+        </scene>
+        <!--BannerAd-->
+        <scene sceneID="R2w-na-rD0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BannerAd" id="Erp-PJ-llH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="HUZ-dO-cEM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coi-pf-Hyi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1496" y="65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
